@@ -7,11 +7,20 @@
   <title>The Raw Urge</title>
   <style>
     @keyframes spiralGlitter {
-      0% {
-        transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
-        opacity: 0;
-        filter: drop-shadow(0 0 5px white);
-      }
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+    opacity: 0;
+    filter: drop-shadow(0 0 5px white);
+  }
+  60% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px white);
+  }
+}
       100% {
         transform: translate(-50%, -50%) rotate(0deg) scale(1);
         opacity: 1;
@@ -57,7 +66,7 @@
     }
 
     .banner-text {
-      animation: spiralGlitter 3s ease-out forwards;
+      animation: spiralGlitter 3s ease-out forwards, fadeText 5s ease-in-out;
       animation-delay: 0.5s;
       color: rgba(255, 255, 255, 0.85);
       font-size: 1.8rem;
@@ -237,7 +246,12 @@
     filter: blur(1px);
   }
 }
-  </style>
+  @keyframes fadeText {
+  0% { opacity: 0; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+</style>
 </head>
 <body>
   <div id="site-wrapper">
@@ -245,7 +259,7 @@
   <div class="ambience-overlay"></div>
     <main>
   <div class="banner-wrapper">
-    <img src="GhostlyBanner.png" alt="Banner" class="banner">
+    <img src="opulent-banner.png" alt="Opulent Gothic Woman" class="banner">
     <div class="banner-text">She packs like she's planning a disappearance.</div>
   </div>
 
