@@ -216,19 +216,27 @@
       pointer-events: none;
       background: linear-gradient(130deg, rgba(255, 215, 150, 0.05) 25%, rgba(255, 223, 185, 0.1) 50%, rgba(255, 215, 150, 0.05) 75%);
       background-size: 400% 400%;
-      animation: goldShimmer 15s ease-in-out infinite;
-      animation: candleAmbience 10s ease-in-out infinite alternate;
+      animation: goldShimmerGlow 20s ease-in-out infinite;
       z-index: -1;
     }
 
-    @keyframes goldShimmer {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-      50% { opacity: 0.55; filter: blur(2px); }
-      100% { opacity: 0.4; filter: blur(1px); }
-    }
+    @keyframes goldShimmerGlow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.4;
+    filter: blur(1px);
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.55;
+    filter: blur(2px);
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.4;
+    filter: blur(1px);
+  }
+}
   </style>
 </head>
 <body>
