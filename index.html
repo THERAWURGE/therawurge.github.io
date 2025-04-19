@@ -26,6 +26,8 @@
     }
 
     body {
+      position: relative;
+      overflow: hidden;
       margin: 0;
       padding: 0;
       background-color: #1a1a1a;
@@ -198,9 +200,28 @@
       padding: 2rem;
       opacity: 0.4;
     }
+  .ambience-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background: radial-gradient(ellipse at top left, rgba(255, 244, 220, 0.02) 0%, transparent 80%),
+                  radial-gradient(ellipse at bottom right, rgba(255, 244, 220, 0.015) 0%, transparent 80%);
+      animation: candleAmbience 10s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes candleAmbience {
+      0% { opacity: 0.4; filter: blur(1px); }
+      50% { opacity: 0.55; filter: blur(2px); }
+      100% { opacity: 0.4; filter: blur(1px); }
+    }
   </style>
 </head>
 <body>
+  <div class="ambience-overlay"></div>
   <div class="banner-wrapper">
     <img src="GhostlyBanner.png" alt="Banner" class="banner">
     <div class="banner-text">She packs like she's planning a disappearance.</div>
