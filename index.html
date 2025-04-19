@@ -8,16 +8,25 @@
   <style>
     @keyframes spiralGlitter {
       0% {
-        transform: translate(-50%, -50%) rotate(-360deg) scale(0);
+        transform: translate(-50%, -50%) rotate(0deg) scale(0);
         opacity: 0;
         filter: drop-shadow(0 0 5px white);
       }
-      50% {
+      25% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(0.5);
         opacity: 0.5;
+      }
+      50% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(0.75);
+        opacity: 0.75;
         filter: drop-shadow(0 0 10px white);
       }
+      75% {
+        transform: translate(-50%, -50%) rotate(720deg) scale(0.9);
+        opacity: 0.9;
+      }
       100% {
-        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        transform: translate(-50%, -50%) rotate(1080deg) scale(1);
         opacity: 1;
         filter: drop-shadow(0 0 20px white);
       }
@@ -51,7 +60,7 @@
     }
 
     .banner-text {
-      animation: spiralGlitter 2.5s ease-out forwards;
+      animation: spiralGlitter 3s ease-out forwards;
       animation-delay: 0.5s;
       color: rgba(255, 255, 255, 0.85);
       font-size: 1.8rem;
@@ -63,23 +72,6 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    header {
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
     }
 
     .button {
@@ -100,92 +92,21 @@
       background-color: #c2b8ab;
     }
 
-    .feature {
-      padding: 3rem 1rem;
-      max-width: 900px;
+    header {
+      padding: 2rem;
     }
 
-    .feature h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-image {
-      width: 100%;
-      max-width: 800px;
-      margin: 1rem auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-
-    .collections {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-      padding: 2rem 1rem;
-      max-width: 1000px;
-    }
-
-    .collection-item {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      border-radius: 10px;
-      width: 280px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .collection-item img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
-
-    .collection-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .hover-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.3s ease;
-      border-radius: 8px;
-    }
-
-    .collection-item:hover .hover-overlay {
-      opacity: 1;
-    }
-
-    .hover-overlay a {
-      color: #e8e0d6;
-      background-color: transparent;
-      border: 2px solid #e8e0d6;
-      padding: 0.5rem 1rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .hover-overlay a:hover {
-      background-color: #e8e0d6;
-      color: #0a0a0a;
-    }
-
-    .collection-item h3 {
-      margin-top: 0;
+    h1 {
+      font-size: 2.5rem;
       margin-bottom: 0.5rem;
-      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
     }
 
     footer {
@@ -210,40 +131,12 @@
     <a href="https://www.pinterest.com/therawurge" class="button" target="_blank">See the Moodboard</a>
   </header>
 
-  <section class="feature">
-    <h2>Featured Collection: The Dark Union</h2>
-    <p><strong>For lovers who pack like they’re planning an escape.</strong><br>
-    Gothic travel kits, bound luggage, and honeymoon rituals.</p>
-    <img src="darkunion.jpg" alt="The Dark Union Set" class="feature-image">
-    <a href="https://www.etsy.com/shop/TheRawUrge" class="button" target="_blank">View Collection</a>
-  </section>
-
-  <section class="collections">
-    <div class="collection-item">
-      <div class="hover-overlay">
-        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=monster-couture" target="_blank">Explore Collection</a>
-      </div>
-      <img src="collection1.jpg" alt="Monster Couture">
-      <h3>Monster Couture</h3>
-      <p>Fashion-forward goth chaos. Glamour with fangs.</p>
-    </div>
-    <div class="collection-item">
-      <div class="hover-overlay">
-        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" target="_blank">Explore Collection</a>
-      </div>
-      <img src="collection2.jpg" alt="Elegantly Unhinged">
-      <h3>Elegantly Unhinged</h3>
-      <p>Everyday gothic wear for souls with a dark streak.</p>
-    </div>
-  </section>
-
   <footer>
     &copy; 2025 The Raw Urge. All rights reserved.<br>
     All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.
   </footer>
 </body>
 </html>
-
 
   <footer>
     &copy; 2025 The Raw Urge. All rights reserved.<br>
