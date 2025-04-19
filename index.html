@@ -113,12 +113,53 @@
       border-radius: 10px;
       width: 280px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
     }
 
     .collection-item img {
       width: 100%;
       border-radius: 8px;
-      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .collection-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .collection-item:hover .hover-overlay {
+      opacity: 1;
+    }
+
+    .hover-overlay a {
+      color: #e8e0d6;
+      background-color: transparent;
+      border: 2px solid #e8e0d6;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .hover-overlay a:hover {
+      background-color: #e8e0d6;
+      color: #0a0a0a;
     }
 
     .collection-item h3 {
@@ -160,15 +201,19 @@
   <section class="collections">
     <div class="collection-item">
       <img src="collection1.jpg" alt="Monster Couture">
+      <div class="hover-overlay">
+        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=monster-couture" target="_blank">Explore Collection</a>
+      </div>
       <h3>Monster Couture</h3>
       <p>Fashion-forward goth chaos. Glamour with fangs.</p>
-      <a href="https://www.etsy.com/shop/TheRawUrge?section_id=monster-couture" class="button" target="_blank">Explore</a>
     </div>
     <div class="collection-item">
       <img src="collection2.jpg" alt="Elegantly Unhinged">
+      <div class="hover-overlay">
+        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" target="_blank">Explore Collection</a>
+      </div>
       <h3>Elegantly Unhinged</h3>
       <p>Everyday gothic wear for souls with a dark streak.</p>
-      <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" class="button" target="_blank">Explore</a>
     </div>
   </section>
 
