@@ -6,6 +6,20 @@
   <meta name="description" content="Darkly Romantic Fashion for the Bold & Bewitched. Discover gothic luggage, couture travel kits, and high-aesthetic apparel by The Raw Urge.">
   <title>The Raw Urge</title>
   <style>
+    @keyframes swirlIn {
+      0% {
+        transform: translate(-50%, -50%) rotate(-20deg) scale(0.8);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+        opacity: 1;
+      }
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -44,6 +58,7 @@
       padding: 1rem 2rem;
       font-style: italic;
       font-family: 'Georgia', serif;
+      animation: swirlIn 2s ease-out forwards;
     }
 
     header {
@@ -222,10 +237,5 @@
     &copy; 2025 The Raw Urge. All rights reserved.<br>
     All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.
   </footer>
-    &copy; 2025 The Raw Urge. All rights reserved.<br>
-    All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.
-  </footer>
-</body>
-</html>
 
 
