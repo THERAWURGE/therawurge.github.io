@@ -9,7 +9,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #0a0a0a;
+      background-color: #111111;
       color: #e8e0d6;
       font-family: 'Georgia', serif;
       display: flex;
@@ -23,6 +23,7 @@
     .banner-wrapper {
       position: relative;
       width: 100%;
+      box-shadow: 0 0 20px rgba(200, 200, 200, 0.15);
     }
 
     .banner {
@@ -37,12 +38,12 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: #e8e0d6;
+      color: rgba(255, 255, 255, 0.7);
       font-size: 1.8rem;
-      background-color: rgba(0, 0, 0, 0.4);
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
       padding: 1rem 2rem;
-      border-radius: 8px;
       font-style: italic;
+      font-family: 'Georgia', serif;
     }
 
     header {
@@ -200,24 +201,27 @@
 
   <section class="collections">
     <div class="collection-item">
-      <img src="collection1.jpg" alt="Monster Couture">
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=monster-couture" target="_blank">Explore Collection</a>
       </div>
+      <img src="collection1.jpg" alt="Monster Couture">
       <h3>Monster Couture</h3>
       <p>Fashion-forward goth chaos. Glamour with fangs.</p>
     </div>
     <div class="collection-item">
-      <img src="collection2.jpg" alt="Elegantly Unhinged">
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" target="_blank">Explore Collection</a>
       </div>
+      <img src="collection2.jpg" alt="Elegantly Unhinged">
       <h3>Elegantly Unhinged</h3>
       <p>Everyday gothic wear for souls with a dark streak.</p>
     </div>
   </section>
 
   <footer>
+    &copy; 2025 The Raw Urge. All rights reserved.<br>
+    All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.
+  </footer>
     &copy; 2025 The Raw Urge. All rights reserved.<br>
     All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.
   </footer>
