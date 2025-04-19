@@ -199,7 +199,13 @@
       padding: 2rem;
       opacity: 0.4;
     }
-  .ambience-overlay {
+  #site-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ambience-overlay {
       position: absolute;
       top: 0;
       left: 0;
@@ -209,7 +215,7 @@
       background: radial-gradient(ellipse at top left, rgba(255, 244, 220, 0.02) 0%, transparent 80%),
                   radial-gradient(ellipse at bottom right, rgba(255, 244, 220, 0.015) 0%, transparent 80%);
       animation: candleAmbience 10s ease-in-out infinite alternate;
-      z-index: 0;
+      z-index: -1;
     }
 
     @keyframes candleAmbience {
@@ -220,6 +226,9 @@
   </style>
 </head>
 <body>
+  <div id="site-wrapper">
+    <div class="ambience-overlay"></div>
+    <main>
   <div class="ambience-overlay"></div>
   <main>
   <div class="banner-wrapper">
@@ -263,7 +272,8 @@
     </div>
   </section>
 
-  </main>
+      </main>
+  </div>
 
 
 </body>
