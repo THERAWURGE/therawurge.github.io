@@ -5,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Decadent Gothic Couture & Travel. Bold fashion for the beautifully undone. Shop The Raw Urge.">
   <title>The Raw Urge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     @keyframes spiralGlitter {
-  0% {
-    transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
-    opacity: 0;
-    filter: drop-shadow(0 0 5px white);
-  }
-  60% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(0deg) scale(1);
-    opacity: 1;
-    filter: drop-shadow(0 0 15px white);
-  }
-}
+      0% {
+        transform: translate(-50%, -50%) rotate(-45deg) scale(0.8);
+        opacity: 0;
+        filter: drop-shadow(0 0 5px white);
+      }
+      60% {
+        opacity: 0.5;
+      }
       100% {
         transform: translate(-50%, -50%) rotate(0deg) scale(1);
         opacity: 1;
@@ -42,24 +41,37 @@
       animation: candleFlicker 6s infinite alternate;
       color: #e8e0d6;
       font-family: 'Georgia', serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      justify-content: flex-start;
-      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #1a1a1a;
       text-align: center;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #e8e0d6;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .banner-wrapper {
       position: relative;
       width: 100%;
-      box-shadow: 0 0 20px rgba(200, 200, 200, 0.15);
     }
 
     .banner {
       width: 100%;
-      max-height: none;
       object-fit: cover;
       display: block;
     }
@@ -72,64 +84,11 @@
       text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
       padding: 1rem 2rem;
       font-style: italic;
-      font-family: 'Georgia', serif;
       position: absolute;
       top: 35%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-
-    header {
-      padding: 2rem;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      line-height: 1.6;
-    }
-
-    .button {
-      background-color: #e8e0d6;
-      color: #0a0a0a;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      margin: 1rem;
-      display: inline-block;
-      font-size: 1rem;
-    }
-
-    .button:hover {
-      background-color: #c2b8ab;
-    }
-
-    .feature {
-      padding: 3rem 1rem;
-      max-width: 900px;
-    }
-
-    .feature h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .feature-image {
-      width: 100%;
-      max-width: 800px;
-      margin: 1rem auto;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+      font-family: 'Cormorant Garamond', serif;
     }
 
     .collections {
@@ -139,6 +98,7 @@
       gap: 2rem;
       padding: 2rem 1rem;
       max-width: 1000px;
+      margin: 0 auto;
     }
 
     .collection-item {
@@ -149,6 +109,7 @@
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
 
     .collection-item img {
@@ -196,168 +157,37 @@
       color: #0a0a0a;
     }
 
-    .collection-item h3 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-size: 1.3rem;
+    .button {
+      background-color: #e8e0d6;
+      color: #0a0a0a;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      font-family: 'Georgia', serif;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin: 0.5rem;
     }
 
-    footer {opacity: 1;
-    }
-  #site-wrapper {
-      position: relative;
-      width: 100%;
-      min-height: 100vh;
-      height: auto;
+    .button:hover {
+      background-color: #c2b8ab;
+      color: #000;
     }
 
-    .ambience-overlay {
-      mix-blend-mode: overlay;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 200%;
-      pointer-events: none;
-      background-image: url('https://www.transparenttextures.com/patterns/golden-paper.png');
-      background-size: cover;
-      animation: goldShimmerGlow 30s ease-in-out infinite;
-      z-index: -1;
-    }
-
-    @keyframes goldShimmerGlow {
-  0% {
-    background-position: 0% 50%;
-    opacity: 0.4;
-    filter: blur(1px);
-  }
-  50% {
-    background-position: 100% 50%;
-    opacity: 0.55;
-    filter: blur(2px);
-  }
-  100% {
-    background-position: 0% 50%;
-    opacity: 0.4;
-    filter: blur(1px);
-  }
-}
-  @keyframes fadeText {
-  0% { opacity: 0; }
-  50% { opacity: 0.4; }
-  100% { opacity: 1; }
-}
-.signature-overlay {
-  position: absolute;
-  bottom: 1rem;
-  right: 1.5rem;
-  z-index: 2;
-}
-
-.signature {
-  width: 140px;
-  opacity: 0.85;
-  color: #f8f9f0;
-  font-family: 'Parisienne', cursive;
-  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
-}
-@media (max-width: 600px) {
-  .banner-text {
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-  }
-}
-
-.banner-text {
-  backdrop-filter: blur(2px);
-}
-</style>
-</head>
-<body>
-  <div id="site-wrapper">
-  <div class="banner-wrapper">
-    <img src="Opulentbannersignature.png" alt="Opulent Gothic Woman" class="banner">
-    <div class="banner-text">Dark glamour with bite.</div>
-  </div>
-  
-  <div class="ambience-overlay"></div>
-    <main>
-    <script>
-      if (window.location.search.includes("submitted=true")) {
-        const thankYou = document.createElement("div");
-        thankYou.textContent = "Thank you for your message — we’ll be in touch soon.";
-        thankYou.style.cssText = "background:#1a1a1a; color:#e8e0d6; padding:1rem 2rem; border-radius:8px; margin:2rem auto; font-style:italic; max-width:600px; text-align:center; box-shadow:0 0 10px rgba(255,255,255,0.1);";
-        document.querySelector('main').prepend(thankYou);
-        setTimeout(() => {
-  thankYou.style.transition = 'opacity 1s ease';
-  thankYou.style.opacity = '0';
-  setTimeout(() => thankYou.remove(), 1000);
-}, 6000);
+    @media (max-width: 600px) {
+      .collection-item {
+        width: 90%;
       }
-    </script>
-
-    
-  </header>
-
-  <section class="feature" style="margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
-    <h2>Featured Collection: The Dark Union</h2>
-    <p><strong>For lovers who pack like they’re planning an escape.</strong><br>
-    Gothic travel kits, bound luggage, and honeymoon rituals.</p>
-    <img src="Corsetluggage.png" alt="The Dark Union Set" class="feature-image">
-    <a href="https://www.etsy.com/shop/TheRawUrge" class="button" target="_blank">View Collection</a>
-  </section>
-
-  <section class="collections" style="margin: 0 auto; text-align: center; justify-content: center;">
-    <div class="collection-item">
-      <div class="hover-overlay">
-        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=monster-couture" target="_blank">Explore Collection</a>
-      </div>
-      <img src="collection1.jpg" alt="Monster Couture">
-      <h3>Monster Couture</h3>
-      <p>Fashion-forward goth chaos. Glamour with fangs.</p>
-    </div>
-    <div class="collection-item">
-      <div class="hover-overlay">
-        <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" target="_blank">Explore Collection</a>
-      </div>
-      <img src="Runningoncoffeeblack.png" alt="Elegantly Unhinged">
-      <h3>Elegantly Unhinged</h3>
-      <p>Everyday gothic wear for souls with a dark streak.</p>
-    </div>
-  </section>
-
-    
-<p style="font-size: 0.85rem; max-width: 600px; margin: 0 auto 1rem;">
-  The Raw Urge is a gothic fashion house and storytelling brand for those who crave drama, decadence, and darkness in every detail.<br>
-  Through romantic couture, haunted travel essentials, and eerie editorials, we dress the beautifully undone.
-</p>
-</section>
-
-<section class="feature" style="text-align: center;">
-  <h2>Join the Mailing List</h2>
-  <p>Get dark love letters from the edge — product drops, rituals, and more.</p>
-  <a href="https://therawurge.substack.com" target="_blank" class="button">Subscribe on Substack</a>
-</section>
-<section class="feature" style="margin: 2rem auto; text-align: center; display: flex; flex-direction: column; align-items: center;">
-  <h2>Send a Message</h2>
-  <p style="font-size: 0.9rem; max-width: 500px; margin-bottom: 1rem;">For product inquiries or order support, please message us directly on <a href="https://www.etsy.com/shop/TheRawUrge" target="_blank" style="color: #e8e0d6; text-decoration: underline;">Etsy</a>.</p>
-  <form action="https://formsubmit.co/Sales@therawurge.com" method="POST" style="margin-top: 1rem;">
-    <input type="hidden" name="_next" value="https://therawurge.com?submitted=true">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="name" placeholder="Your Name" required style="padding: 0.5rem; margin: 0.5rem; width: 200px;">
-    <input type="email" name="email" placeholder="Your Email" required style="padding: 0.5rem; margin: 0.5rem; width: 200px;">
-    <textarea name="message" placeholder="Your Message" required style="padding: 0.5rem; margin: 0.5rem; width: 420px; height: 100px;"></textarea><br>
-    <button type="submit" class="button">Send Message</button>
-  </form>
-</section>
-</main>
-  </div>
-  <footer>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Laurel_wreath.svg/120px-Laurel_wreath.svg.png" alt="Crest Icon" style="height: 40px; margin-bottom: 0.5rem; opacity: 0.8;">
-  &copy; 2025 The Raw Urge. All rights reserved.<br>
-  All content, imagery, and branding are the intellectual property of The Raw Urge and may not be reproduced without permission.<br>
-  <a href="mailto:Sales@therawurge.com" style="color: #e8e0d6; text-decoration: none;">Sales@therawurge.com</a><br>
-  <p style="margin-top: 0.5rem; font-size: 0.8rem;">For order support, please message us directly on <a href="https://www.etsy.com/shop/TheRawUrge" target="_blank" style="color: #e8e0d6; text-decoration: underline;">Etsy</a>.</p>
-</footer>
-</body>
-</html>
+    }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-324035575"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-324035575');
+</script>
+</head>
