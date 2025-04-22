@@ -90,15 +90,11 @@
   align-items: center;
       text-align: center;
     }
-    $1
-  position: relative;
-  z-index: 1;
-}
+    
     .collection-item:hover img {
       transform: scale(1.05);
     }
-    $1
-  z-index: 2;
+    
     .collection-item:hover .hover-overlay {
       opacity: 1;
     }
@@ -133,19 +129,16 @@
 }
 
 .hover-overlay a {
-    .button {
-      background-color: #e8e0d6;
-      color: #0a0a0a;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      font-family: 'Georgia', serif;
-      transition: all 0.3s ease;
-      display: inline-block;
-      margin: 0.5rem;
-    }
+  color: #e8e0d6;
+  background-color: transparent;
+  border: 2px solid #e8e0d6;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  z-index: 3;
+}
     .button:hover {
       background-color: #c2b8ab;
       color: #000;
@@ -206,7 +199,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=dark-union-collection" target="_blank">Explore</a>
       </div>
-      <img src="DarkUnion.jpg" alt="Dark Union Collection">
+      <img src="darkunion.jpg" alt="Dark Union Collection">
       <h3>Dark Union Collection</h3>
       <p>Gothic weddings, bound honeymoons, and ceremonial romance.</p>
     </div>
