@@ -76,28 +76,15 @@
       overflow: hidden;
       text-align: center;
     }
-    .collection-item img {
-      width: 100%;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-    }
+    $1
+  position: relative;
+  z-index: 1;
+}
     .collection-item:hover img {
       transform: scale(1.05);
     }
-    .hover-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      opacity: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: opacity 0.3s ease;
-      border-radius: 8px;
-    }
+    $1
+  z-index: 2;
     .collection-item:hover .hover-overlay {
       opacity: 1;
     }
@@ -170,7 +157,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge" target="_blank">Browse All</a>
       </div>
-      <img src="All.png" alt="All Items - The Raw Urge">
+      <img src="all.jpg" alt="All Items - The Raw Urge">
       <h3>All</h3>
       <p>Everything. Decadent, dark, and daring.</p>
     </div>
@@ -178,7 +165,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=dark-union-collection" target="_blank">Explore</a>
       </div>
-      <img src="DarkUnion.jpg" alt="Dark Union Collection">
+      <img src="darkunion.jpg" alt="Dark Union Collection">
       <h3>Dark Union Collection</h3>
       <p>Gothic weddings, bound honeymoons, and ceremonial romance.</p>
     </div>
@@ -186,7 +173,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=elegantly-unhinged" target="_blank">Explore</a>
       </div>
-      <img src="Runningoncoffeeblack.png" alt="Elegantly Unhinged">
+      <img src="elegantly.jpg" alt="Elegantly Unhinged">
       <h3>Elegantly Unhinged</h3>
       <p>Dark humor and style for everyday hauntings.</p>
     </div>
@@ -194,7 +181,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=bookish-brooding" target="_blank">Explore</a>
       </div>
-      <img src="Bookish.jpg" alt="Bookish & Brooding">
+      <img src="bookish.jpg" alt="Bookish & Brooding">
       <h3>Bookish & Brooding</h3>
       <p>Literary obsessions and gothic academia.</p>
     </div>
@@ -218,7 +205,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=getaway-collection" target="_blank">Explore</a>
       </div>
-      <img src="skullsuitcase.jpg" alt="The Getaway Collection">
+      <img src="getaway.jpg" alt="The Getaway Collection">
       <h3>The Getaway Collection</h3>
       <p>Travel-ready, soul-stirring pieces.</p>
     </div>
@@ -234,7 +221,7 @@
       <div class="hover-overlay">
         <a href="https://www.etsy.com/shop/TheRawUrge?section_id=gothic-wall-art-drama" target="_blank">Explore</a>
       </div>
-      <img src="womanwallart.jpg" alt="Gothic Wall Art Drama">
+      <img src="wallart.jpg" alt="Gothic Wall Art Drama">
       <h3>Gothic Wall Art Drama</h3>
       <p>Bold pieces to haunt your home.</p>
     </div>
